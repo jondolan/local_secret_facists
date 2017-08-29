@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>
+    Local Secret Hitler
+  </title>
+  <script type = "text/javascript" src = "jquery.min.js"></script>
+  <script type = "text/javascript" src = "main.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript">
+    window.onbeforeunload = function() {
+        return "Dude, you done fucked up";
+    }
+</script>
+</head>
+
+<body>
+  <h1>Secret Hitler</h1>
+  <h4>"Pass the phone style"</h4>
+  <br />
+  <div id = "load">
+    <p>Begin a new game by selecting the number of players and pressing Play!</p>
+    Players: <select id = "player_count">
+      <option value = "2">2</option>
+      <option value = "5">5</option>
+      <option value = "6">6</option>
+      <option value = "7">7</option>
+      <option value = "8">8</option>
+      <option value = "9">9</option>
+      <option value = "10">10</option>
+    </select>
+    <!-- here, add spaces for people to type their names in, and cookies to save the names, and an option to just stick with numbers-->
+    <br />
+    <span id = "play_game" class = "button">Play!</div>
+  </div>
+  <div id = "game">
+    <div id = "timer">10</div>
+    <div id = "instructions">&nbsp;</div>
+    <div id = "secret_text">&nbsp;</div>
+    <span id = "action_button" class = "button">&nbsp;</span>
+    <span id = "action_button2" class = "button">&nbsp;</span>
+    <div id = "cards">
+      <span id = "card1"><p>Card 1</p></span>
+      <span id = "card2"><p>Card 1</p></span>
+      <span id = "card3"><p>Card 1</p></span>
+    </div>
+    <div id = "player_select">&nbsp;</div>
+  </div>
+  <div id = "win">&nbsp;</div>
+<body>
+</html>
