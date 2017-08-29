@@ -113,7 +113,7 @@ function revealPlayerParty(player) {
   $("#instructions").fadeOut();
   $("#secret_text").html("That player is a <span class = 'role'>"
     + getParty(allRoles[player]) + "</span>");
-  latchTimer("#timer", 0, function(){
+  latchTimer("#timer", 5, function(){
     $("#secret_text").fadeOut();
     selectPresident();
   });
@@ -257,7 +257,7 @@ function flipTheTopCard() { // if 3 unsuccessful elections in a row
   } else {
     passedLiberals++;
   }
-  latchTimer("#timer", 0, function(){ numConsecFails = 0;
+  latchTimer("#timer", 15, function(){ numConsecFails = 0;
     $("#cards").fadeOut() ;selectPresident(); });
 }
 
@@ -465,7 +465,7 @@ function selectPresident() {
   }
   $("#instructions").html("Player " + (currentPresident+1) + " is President!\
     <br />Pass them the phone now.").fadeIn();
-  latchTimer("#timer", 0, function() { election() });
+  latchTimer("#timer", 10, function() { election() });
 }
 
 function latchTimer(el, startingTime, callback) {
@@ -520,7 +520,7 @@ function displayRole() {
       allRoles[currentPlayer] + "</span><br />Your party affiliation is \
       <span class = 'role'>" + getParty(allRoles[currentPlayer]) + "</span>");
   });
-  latchTimer("#timer", 0, function() { currentPlayer++; giveRoles() });
+  latchTimer("#timer", 5, function() { currentPlayer++; giveRoles() });
 }
 
 function getParty(role) {
@@ -580,7 +580,7 @@ function beginGame() {
         + "</span>. Please hand the phone to the first player!");
       $("#game").fadeIn();
     });
-    latchTimer("#timer", 0, function() { giveRoles(); });
+    latchTimer("#timer", 10, function() { giveRoles(); });
   }
 }
 
