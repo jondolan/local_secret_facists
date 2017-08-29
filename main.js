@@ -272,11 +272,11 @@ function chancellorPresentCards() {
   if (vetoPower) {
     $("#instructions").append("<br />Veto power is enabled. If you don't want\
       to pass these actions, ask the President to veto the action. If they \
-      agree, you may press the Veto! button below and not pass any actions");
+      agree, you may press the Veto! button below and not pass any actions.");
     $("action_button2").text("Veto!").one("click", function() {
       numConsecFails++;
       // TODO anything more?
-    });
+    }).fadeIn();
   }
 
   $("#cards span").click(function() {
